@@ -6,6 +6,7 @@ import About from './components/scripts/About';
 import React, { useState } from 'react';
 import SignIn from './components/auth/SignIn';
 import Store from './components/scripts/Store';
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
 
