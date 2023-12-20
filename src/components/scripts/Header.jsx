@@ -18,6 +18,9 @@ const Header = ({ currentPage, changePage }) => {
         </div>
       </div>
       <div className="nav-right">
+        <div className='nav-item' onClick={() => changePage('OrderDetail')}>
+          OrderDetail
+        </div>
         <div className="nav-item" onClick={() => changePage('Login')}>
           Login
         </div>
