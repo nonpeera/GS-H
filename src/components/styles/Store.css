@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    height: 100vh; /* Set the container height to full viewport height */
+  }
+.left-section {
+    flex: 1; /* Adjust the width of the left section */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #000000;
+    color: white; /* Set text color */
+    font-size: 24px; /* Set font size */
+    text-align: center; /* Align text in the center */
+  }
+  
+  .right-section {
+    flex: 1; /* Adjust the width of the left section */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #000000;
+    color: white; /* Set text color */
+    font-size: 24px; /* Set font size */
+    text-align: center; /* Align text in the center */
+  }
