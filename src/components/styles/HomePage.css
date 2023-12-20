@@ -50,5 +50,7 @@
   background-size: cover; /* Ensure the background image covers the entire area */
   background-position: center; /* Center the background image */
 }
-
+h1 {
+  line-height: 0.2;
+}
   

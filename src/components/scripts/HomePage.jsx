@@ -5,11 +5,11 @@ function HomePage() {
     return (
       <div className="container">
         <div className="left-section">
-          <h1>
-            GROWNSEED <br />
-            @HOME <br />
-          </h1>
-          <p>We sell and deliver plants worldwide.</p>
+            <form1>
+              <h1>GROWNSEED</h1>
+              <h1>@HOME</h1>
+              <h6>We sell and deliver plants worldwide.</h6>
+            </form1>
         </div>
         <div className="right-section">
           {/* Content for the right section */}

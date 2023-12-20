@@ -21,9 +21,11 @@
   
   .nav-item {
     cursor: pointer;
-    font-size: x-large;
     margin-right: 15px;
     color: #000000;
+    font-size: 24px; /* Set font size */
+    text-align: center; /* Align text in the center */
+    display: flex;
   }
   
   .nav-item:hover {
