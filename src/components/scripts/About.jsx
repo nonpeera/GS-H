@@ -9,11 +9,11 @@ function About() {
                 <div className='text'>
                     <form>
                         <h1>A Minimal Team</h1>
-                        <h4>เราเป็นผู้ค้าส่งและค้าปลีกพันธุ์ไม้เมืองร้อน</h4>
-                        <h4>รวมถึงบอน พืชด่าง และพันธุ์ไม้เมืองร้อนพันธุ์ใหม่</h4>
-                        <h4>เรามีประสบการณ์หลายปีในการขนส่งพืชเมืองร้อนทั่วโลก</h4>
-                        <h4>ไปยังหลายประเทศ: สหรัฐอเมริกาสหราชอาณาจักร รัสเซีย และจีน</h4> 
-                        <h4>เรามักจะหาวิธีที่สมบูรณ์แบบในการจัดส่งต้นไม้อย่างรวดเร็วและอยู่ในสภาพดีเพื่อให้คุณปลูก</h4>
+                        <h4>We are a wholesaler and retailer of tropical plants.</h4>
+                        <h4>Including bonsai, spotted plants and new tropical plants.</h4>
+                        <h4>We have many years of experience shipping tropical plants around the world.</h4>
+                        <h4>To many countries: USA, UK, Russia and China.</h4> 
+                        <h4>We always find the perfect way to deliver plants quickly and in good condition for you to plant.</h4>
                     </form>
                     <img src='plants.png' alt='plants'></img>
                 </div>
