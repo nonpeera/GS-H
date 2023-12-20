@@ -1,19 +1,12 @@
-// Header.jsx
-
-import React, { useState } from 'react';
-import '../styles/Header.css'; // Import the styles
-
-const Header = () => {
-  const [currentPage, setCurrentPage] = useState('Home');
-
-  const changePage = (page) => {
-    setCurrentPage(page);
-  };
-
+import React from 'react';
+import '../styles/Header.css';
+import HomePage from './HomePage';
+import Contact from './Contact';
+const Header = ({ currentPage, changePage }) => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <div className="nav-item" onClick={() => changePage('Home')}>
+        <div className="nav-item" onClick={() => changePage("Home")}>
           Home
         </div>
         <div className="nav-item" onClick={() => changePage('Store')}>
@@ -22,7 +15,7 @@ const Header = () => {
         <div className="nav-item" onClick={() => changePage('AboutUs')}>
           About Us
         </div>
-        <div className="nav-item" onClick={() => changePage('Contract')}>
+        <div className="nav-item" onClick={() => changePage("Contact")}>
           Contract
         </div>
       </div>
