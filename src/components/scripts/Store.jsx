@@ -1,10 +1,10 @@
-import Article from './Article';
+import Philodendron from './Philodendron';
 import '../styles/Store.css';
 
 const Store = () => {
   return (
     <div className="container">
-      <Article />
+      <Philodendron />
     </div>
   );
 };

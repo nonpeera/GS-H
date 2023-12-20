@@ -32,6 +32,8 @@ body {
       padding: 20px;
       background-color: #f4f4f4;
   }
-  h2 {
-    text-align: center;
+  p {
+    padding-left: 43px;
+    padding-top: 10px;
+    font-weight: bold;
   }

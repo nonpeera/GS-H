@@ -4,14 +4,14 @@ import GridItem from './GridItem';
 
 const { Content } = Layout;
 const products = [
-  { id: 1, description: 'Description', name: 'Product 1', image: '/flower.jpg' },
-  { id: 2, description: 'Description', name: 'Product 2', image: '/flower.jpg' },
+  { id: 1, description: 'normal', name: 'Caramel marble', image: '/flower.jpg' },
+  { id: 2, description: 'Variegated', name: 'Red Anderson', image: '/flower.jpg' },
   { id: 3, description: 'Description', name: 'Product 3', image: '/flower.jpg' },
   { id: 4, description: 'Description', name: 'Product 4', image: '/flower.jpg' },
   { id: 5, description: 'Description', name: 'Product 5', image: '/flower.jpg' },
 ];
 
-const MainComponent = () => {
+const Philodendron = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sidebar />
@@ -32,4 +32,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default Philodendron;
