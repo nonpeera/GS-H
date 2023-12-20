@@ -33,6 +33,7 @@ const SignUp = () => {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button type="submit">Sign Up</button>
+        <h6>Don't have an account? Register Here</h6>
       </form>
     </div>
   );
