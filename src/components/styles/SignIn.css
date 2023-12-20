@@ -1,0 +1,97 @@
+.Home-Header {
+    display: flex;
+}
+
+.App-Header {
+    display: flex;
+}
+.split-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .contracted .left-side {
+    width: 0; /* Contract the left side when contracted class is applied */
+  }
+
+/* CSS for the HomePage */
+.container {
+  display: flex;
+  height: 100vh; /* Set the container height to full viewport height */
+}
+
+.text {
+  flex: 1; /* Adjust the width of the left section */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: #000000;
+  color: white; /* Set text color */
+  font-size: 24px; /* Set font size */
+  text-align: center; /* Align text in the center */
+}
+
+.left-section {
+  flex: 1; /* Adjust the width of the left section */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: #000000;
+  color: white; /* Set text color */
+  font-size: 24px; /* Set font size */
+  text-align: center; /* Align text in the center */
+  text-align: left;
+  
+}
+
+.right-section {
+  flex: 1; /* Adjust the width of the right section */
+  height: 100%; /* Set the height of the right section to fill the container */
+  background-image: url("/public/flower.jpg");
+  background-color: #eaeaea;
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the background image */
+}
+h1 {
+  line-height: 1;
+}
+.rounded-textfield {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    outline: none; 
+    line-height: 0.2;
+  }
+.rounded-textfield:hover {
+    width: 100%;
+    border-color: #ccc; /* Change border color on focus or hover */
+    color: rgb(255, 255, 255); /* Change text color on focus or hover */
+}
+.grownseed-button {
+    width: 108%;
+    padding: 10px 20px;
+    background-color: #3fb598;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 0.2;
+    height: 40px;
+   }
+   
+.grownseed-button:hover {
+    background-color: rgb(141, 141, 141);
+}
+.textcomment {
+    color:#ffffff ;
+    margin-bottom: 30px;
+    left : 0px;
+    line-height: 1.2;
+}
