@@ -1,5 +1,5 @@
 const contactStyle = {
-    backgroundImage: 'url("your-image-url.jpg")',
+    backgroundImage: 'url("/flower.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '300px',
@@ -10,18 +10,12 @@ const contactStyle = {
     fontSize: '24px',
 }
 
-export function Contact_TH() {
-    return (
-        <div style={contactStyle}>
-            <h1>ติดต่อเรา</h1>
-        </div>
-    )
-}
-
-export function Contact_ENG() {
+function Contact() {
     return (
         <div style={contactStyle}>
             Contact us
         </div>
     )
 }
+
+export default Contact;
