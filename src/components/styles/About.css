@@ -2,12 +2,12 @@
     background-image: url("/public/flower.jpg");
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 100px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     position: relative;
@@ -16,7 +16,12 @@
 
 .text {
     font-size: medium;
-    left: 200;
+    height: 400px;
+    text-align: left;
+    margin-top: 155px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 50px;
 }
 
 body {
@@ -25,4 +30,13 @@ body {
 .background{
     background-color: black;
     height: 700px;
+}
+
+h1 {
+    line-height: 2;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 1;
 }
