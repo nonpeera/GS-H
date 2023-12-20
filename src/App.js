@@ -5,6 +5,8 @@ import Contact from './components/scripts/Contact';
 import About from './components/scripts/About';
 import React, { useState } from 'react';
 import Store from './components/scripts/Store';
+import OrderDetail from './components/scripts/OrderDetail';
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
 
@@ -19,6 +21,7 @@ const App = () => {
       {currentPage === 'Store' && <Store />}
       {currentPage === 'Contact' && <Contact />}
       {currentPage === 'AboutUs' && <About />}
+      {currentPage === 'OrderDetail' && <OrderDetail/>}
     </div>
   );
 };
