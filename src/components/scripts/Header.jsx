@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+
 const Header = ({ currentPage, changePage }) => {
   return (
     <nav className="navbar">
