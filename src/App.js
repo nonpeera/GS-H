@@ -4,11 +4,9 @@ import HomePage from './components/scripts/HomePage';
 import Contact from './components/scripts/Contact';
 import About from './components/scripts/About';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import SignIn from './components/auth/SignIn';
-=======
 import Store from './components/scripts/Store';
->>>>>>> 46a122a51b9329b6936a9e3b4fab86f0625488f6
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
 
