@@ -16,10 +16,12 @@ const Header = () => {
     <header style={{ background: 'white', padding: '10px', borderBottom: '1px solid #ccc' }}>
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
-          <a href="/">Home</a>
-          <a href="/store">Store</a>
-          <a href="/about">About Me</a>
-          <a href="/contact">Contact Us</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/store">Store</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
         </div>
 
         <div>
