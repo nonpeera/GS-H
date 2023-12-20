@@ -1,11 +1,11 @@
 import './App.css';
 import Header from './components/scripts/Header';
-import Contact from './components/scripts/Contact';
+import HomePage from './components/scripts/HomePage';
 function App() {
   return (
     <div>
       <Header></Header>
-      <Contact></Contact>
+      <HomePage></HomePage>
     </div>
   );
 }

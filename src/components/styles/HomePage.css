@@ -10,21 +10,45 @@
     height: 100vh;
   }
   
-  .left-side {
-    flex: 0 0 300px; /* Set a fixed width for the left side */
-    padding: 20px;
-    background-color: #f0f0f0;
-  }
-  
-  .right-side {
-    flex: 1;
-    background-image: url('path/to/your/background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    transition: all 0.3s ease; /* Add a smooth transition effect */
-  }
-  
   .contracted .left-side {
     width: 0; /* Contract the left side when contracted class is applied */
   }
+
+/* CSS for the HomePage */
+.container {
+  display: flex;
+  height: 100vh; /* Set the container height to full viewport height */
+}
+
+.text {
+  flex: 1; /* Adjust the width of the left section */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: #000000;
+  color: white; /* Set text color */
+  font-size: 24px; /* Set font size */
+  text-align: center; /* Align text in the center */
+}
+
+.left-section {
+  flex: 1; /* Adjust the width of the left section */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: #000000;
+  color: white; /* Set text color */
+  font-size: 24px; /* Set font size */
+  text-align: center; /* Align text in the center */
+}
+
+.right-section {
+  flex: 1; /* Adjust the width of the right section */
+  height: 100%; /* Set the height of the right section to fill the container */
+  background-image: url("/public/flower.jpg");
+  background-color: #eaeaea;
+  background-size: cover; /* Ensure the background image covers the entire area */
+  background-position: center; /* Center the background image */
+}
+
   
