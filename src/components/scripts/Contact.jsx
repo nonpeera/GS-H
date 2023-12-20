@@ -7,7 +7,8 @@ const contactStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     color: 'black',
-    fontSize: '24px',
+    fontSize: '30px',
+    fontWeight: 'bold',
 }
 
 function Contact() {
