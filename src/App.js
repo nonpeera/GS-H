@@ -5,7 +5,7 @@ import Contact from './components/scripts/Contact';
 import About from './components/scripts/About';
 import React, { useState } from 'react';
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('Contact');
+  const [currentPage, setCurrentPage] = useState('Home');
 
   const changePage = (page) => {
     setCurrentPage(page);

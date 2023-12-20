@@ -1,7 +1,5 @@
 import React from 'react';
 import '../styles/Header.css';
-import HomePage from './HomePage';
-import Contact from './Contact';
 const Header = ({ currentPage, changePage }) => {
   return (
     <nav className="navbar">
