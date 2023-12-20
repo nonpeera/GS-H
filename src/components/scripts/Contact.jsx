@@ -35,7 +35,7 @@ const iconImageStyle = {
     margin: 'auto',
 };
 
-function Contact() {
+const Contact = () => {
     return (
         <div>
             <div style={contactStyle}>
