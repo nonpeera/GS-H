@@ -2,13 +2,14 @@ const contactStyle = {
     backgroundImage: 'url("/flower.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '300px',
+    height: '180px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     color: 'black',
-    fontSize: '100px',
+    fontSize: '50px',
     fontWeight: 'bold',
+    borderRadius: '0px 0px 100px 100px',
 }
 const blackBackgroundStyle = {
     backgroundColor: 'black',
