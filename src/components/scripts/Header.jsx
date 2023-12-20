@@ -1,43 +1,38 @@
+// Header.jsx
+
 import React, { useState } from 'react';
+import '../styles/Header.css'; // Import the styles
 
 const Header = () => {
-  const [language, setLanguage] = useState('en'); // Default language is English
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [currentPage, setCurrentPage] = useState('Home');
 
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'th' : 'en'));
-  };
-
-  const handleLogin = () => {
-    setLoggedIn(true); // You would typically implement proper authentication logic here
+  const changePage = (page) => {
+    setCurrentPage(page);
   };
 
   return (
-    <header style={{ background: 'white', padding: '10px', borderBottom: '1px solid #ccc' }}>
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/store">Store</a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
+    <nav className="navbar">
+      <div className="nav-left">
+        <div className="nav-item" onClick={() => changePage('Home')}>
+          Home
         </div>
-
-        <div>
-          <span style={{ marginRight: '10px' }}>Language: {language.toUpperCase()}</span>
-          <button onClick={toggleLanguage}>Toggle Language</button>
+        <div className="nav-item" onClick={() => changePage('Store')}>
+          Store
         </div>
-
-        <div>
-          {isLoggedIn ? (
-            <span>Welcome, User! (Add logout functionality)</span>
-          ) : (
-            <button onClick={handleLogin}>Login</button>
-          )}
+        <div className="nav-item" onClick={() => changePage('AboutUs')}>
+          About Us
         </div>
-      </nav>
-    </header>
+        <div className="nav-item" onClick={() => changePage('Contract')}>
+          Contract
+        </div>
+      </div>
+      <div className="nav-right">
+        <div className="nav-item" onClick={() => changePage('Login')}>
+          Login
+        </div>
+      </div>
+      <p>Current Page: {currentPage}</p>
+    </nav>
   );
 };
 

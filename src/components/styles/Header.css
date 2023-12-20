@@ -1,11 +1,30 @@
-.ui{
-    flex:1;
-    list-style: none;
-    text-align: center;
-}
-ul li{
-    display: inline-block;
-    margin:10px 20px ;
-    font-size: 18x;
+/* styles.css */
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push "Login" to the right */
+  }
+  
+  .nav-item {
     cursor: pointer;
-}
+    margin-right: 15px;
+  }
+  
+  .nav-item:hover {
+    text-decoration: underline;
+  }
+  
