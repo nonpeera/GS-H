@@ -24,6 +24,7 @@ const Philodendron = () => {
                 description={product.description}
                 image={product.image} />
             ))}
+            
           </div>
         </Content>
       </Layout>
