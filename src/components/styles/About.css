@@ -1,0 +1,28 @@
+.aboutStyle {
+    background-image: url("/public/flower.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    border-radius: 0px 0px 100px 100px;
+}
+
+.text {
+    font-size: medium;
+    left: 200;
+}
+
+body {
+    background-color: black;
+}
+.background{
+    background-color: black;
+    height: 700px;
+}
