@@ -62,17 +62,17 @@ const Contact = () => {
                         <tr>
                             <td style={cellStyle}>
                                 <h1>Address</h1>
-                                <p>48 Pongyangok Subdistrict,</p>
-                                <p>Hang Chat District,</p>
-                                <p>Lampang Province 52190</p>
+                                <h5>48 Pongyangok Subdistrict,</h5>
+                                <h5>Hang Chat District,</h5>
+                                <h5>Lampang Province 52190</h5>
                             </td>
                             <td style={cellStyle}>
                                 <h1>Phone</h1>
-                                <p>(+66) 98 765 4321</p>
+                                <h5>(+66) 98 765 4321</h5>
                             </td>
                             <td style={cellStyle}>
                                 <h1>Email</h1>
-                                <p>growmseed@gmail.com</p>
+                                <h5>growmseed@gmail.com</h5>
                             </td>
                         </tr>
                     </tbody>

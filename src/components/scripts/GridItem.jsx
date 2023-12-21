@@ -18,9 +18,9 @@ const GridItem = ({ image, name , species, detail, stock}) => {
         title={<span style={titleStyle}>{name}</span>}
         description={
           <>
-            <p>Species: {species}</p>
-            <p>Detail: {detail}</p>
-            <p>Stock: {stock}</p>
+            <h3>Species: {species}</h3>
+            <h3>Detail: {detail}</h3>
+            <h3>Stock: {stock}</h3>
           </>
         } />
     </Card>
