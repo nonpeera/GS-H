@@ -37,3 +37,21 @@ body {
     padding-top: 10px;
     font-weight: bold;
   }
+
+.app-search {
+  margin-bottom: 20px;
+}
+
+.app-search-input {
+  box-sizing: border-box;
+  border: 1px solid gray;
+  font-size: 24px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px 20px 20px 20px;
+}
+
+body {
+  background-color: white;
+}
