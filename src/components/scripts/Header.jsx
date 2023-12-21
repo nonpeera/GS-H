@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
-import AuthDetails from '../auth/AuthDetails';
+
 const Header = ({ currentPage, changePage }) => {
   return (
     <nav className="navbar">
@@ -19,7 +19,6 @@ const Header = ({ currentPage, changePage }) => {
         </div>
       </div>
       <div className="nav-right">
-        <div><AuthDetails/></div>
         <div className="nav-item" onClick={() => changePage('Login')}>
           Login
         </div>
