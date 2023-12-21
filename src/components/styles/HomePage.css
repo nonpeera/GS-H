@@ -53,21 +53,4 @@
 h1 {
   line-height: 0.2;
 }
-
-.navigation-button {
-  display: inline-block;
-  text-align: center;
-  margin: 10px;
-  padding: 10px 15px;
-  background-color: #014D26;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 150px;
-  height: 20px;
-  position: absolute;
-  margin-top: 300px;
-  margin-right: 150px;
-}
   
