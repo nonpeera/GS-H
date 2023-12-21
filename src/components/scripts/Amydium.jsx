@@ -1,6 +1,7 @@
 import { Layout } from 'antd';
 import Sidebar from './Sidebar';
 import GridItem from './GridItem';
+
 const { Content } = Layout;
 const products = [
   { id: 1, description: 'Variegated', name: 'Medium', image: '/medium.jpg' },
