@@ -5,6 +5,7 @@ import '../styles/SignIn.css';
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const signIn = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ const SignIn = () => {
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
       });
   };
 
@@ -39,6 +41,9 @@ const SignIn = () => {
                     onChange={(e) => setPassword(e.target.value)}>
                 </input>
                 </h6>
+                {error && (
+            <h6 className="error-message">{error}</h6>
+          )}
                 <button type="submit" className="grownseed-button">Log In</button>
             </form>
         </div>

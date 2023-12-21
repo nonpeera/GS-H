@@ -5,6 +5,7 @@ import Contact from './components/scripts/Contact';
 import About from './components/scripts/About';
 import React, { useState } from 'react';
 import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/Signup' ;
 import Store from './components/scripts/Store';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       {currentPage === 'Contact' && <Contact />}
       {currentPage === 'AboutUs' && <About />}
       {currentPage === 'Login' && <SignIn />}
+      {currentPage === 'Signup' && <SignUp />}
     </div>
   );
 };
