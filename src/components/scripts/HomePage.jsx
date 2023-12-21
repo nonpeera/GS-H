@@ -6,8 +6,7 @@ function HomePage() {
       <div className="container">
         <div className="left-section">
             <form1>
-              <h1>GROWNSEED</h1>
-              <h1>@HOME</h1>
+              <h1>GROWNSEED<br/>@HOME</h1>
               <h6>We sell and deliver plants worldwide.</h6>           
             </form1>
             <div className='navigation-button'>Contact Us</div>
