@@ -13,8 +13,6 @@ function HomePage({ currentPage, changePage }) {
             <div className='navigation-button' >Contact Us</div>
         </div>
         <div className="right-section">
-          {/* Content for the right section */}
-          {/* Consider adding images, additional information, or functionality here */}
         </div>
       </div>
     );

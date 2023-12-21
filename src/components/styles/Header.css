@@ -28,6 +28,10 @@
     display: flex;
   }
   
+  body {
+    background-color: white;
+  }
+
   .nav-item:hover {
     text-decoration: underline;
   }
