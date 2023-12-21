@@ -1,4 +1,4 @@
-import '../styles/Store.css';
+import '../styles/Sidebar.css';
 import { Layout, Menu } from 'antd';
 import {HeartOutlined, GiftOutlined} from '@ant-design/icons';
 
