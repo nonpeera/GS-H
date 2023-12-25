@@ -114,3 +114,8 @@
     text-align: left;
     font-size: medium;
 }
+.rounded-textfield:hover {
+    width: 100%;
+    border-color: hsl(138, 95%, 24%); /* Change border color on focus or hover */
+    color: rgb(0, 0, 0); /* Change text color on focus or hover */
+}
