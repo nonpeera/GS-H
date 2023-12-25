@@ -3,7 +3,7 @@ import '../styles/GridItem.css';
 
 const { Meta } = Card;
 
-const GridItem = ({ image, name , species, detail, stock}) => {
+const GridItem = ({ image, name , species, detail, stock, price}) => {
   const titleStyle = {
     fontSize: '20px',
     fontWeight: 'bold',
@@ -20,6 +20,7 @@ const GridItem = ({ image, name , species, detail, stock}) => {
           <>
             <h3>Species: {species}</h3>
             <h3>Detail: {detail}</h3>
+            <h3 style={{color: 'crimson', fontWeight: 'bold',}}>Price: ฿{price}</h3>
             <h3>Stock: {stock}</h3>
           </>
         } />
