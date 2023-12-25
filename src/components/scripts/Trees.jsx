@@ -18,11 +18,30 @@ const products = [
   { id: 10, detail: 'Normal', stock: 30, species: 'Philodendron', name: 'Goeldii', image: '/goeldii.jpg', price: 350},
 ];
 
-const Trees = () => {
+const Trees = (e) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [buyModalVisible, setBuyModalVisible] = useState(false);
+  const [buyOrderDetailsVisible, setOrderDetailsVisible] = useState(false);
+  const [qrCodeVisible , setQrCodeVisible] = useState(false) ;
+  const [successVisible, setSuccessVisible] = useState(false);
+  const [shippingAddress, setShippingAddress] = useState({
+    firstname: '',
+    lastname: '',
+    address: '',
+    city: '',
+    state: '',
+    country: '',
+    zip: '',
+  });
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setShippingAddress({
+      ...shippingAddress,
+      [name]: value,
+    });
+  };
   const openModal = (product) => {
     setSelectedProduct(product);
     setQuantity(1);
@@ -49,13 +68,31 @@ const Trees = () => {
   const handleBuyPlant = () => {
     setBuyModalVisible(true); // Show the buy modal when "Buy Plant" is clicked
   };
-
   const handleBuyConfirmation = () => {
     // Perform actions when buy is confirmed (e.g., add to cart, make a purchase)
     // For demonstration, simply close the buy modal
-    setBuyModalVisible(false);
+    setOrderDetailsVisible(true) ;
+    console.log('Shipping Address:', shippingAddress);
   };
-
+  const hanndelPurchase = () => {
+    setOrderDetailsVisible(false) ;
+    setQrCodeVisible(true) ;
+  }
+  const handleQrCodeConfirmation = () => {
+    // Perform actions when buy is confirmed (e.g., add to cart, make a purchase)
+    // For demonstration, simply close the buy modal
+    setQrCodeVisible(false);
+    setSuccessVisible(true);
+  };
+  const handleSuccessConfirmation = () => {
+    // Perform actions when buy is confirmed (e.g., add to cart, make a purchase)
+    // For demonstration, simply close the buy modal
+    setQrCodeVisible(false);
+    setSuccessVisible(false);
+    setSelectedProduct(null);
+    setOrderDetailsVisible(false) ;
+    setBuyModalVisible(false) ;
+  };
   return (
     <Layout style={{ minHeight: '150vh' }}>
       <Sidebar />
@@ -98,23 +135,110 @@ const Trees = () => {
               </div>
             )}
           </Modal>
-
-          {/* Buy Plant Modal */}
           <Modal
-            title="Confirm Purchase"
+            title="Shipping address"
             visible={buyModalVisible}
             onCancel={() => setBuyModalVisible(false)}
+      
             footer={[
               <button key="cancel" className="cancel" onClick={() => setBuyModalVisible(false)}>
                 Cancel
               </button>,
-              <button key="buy" className="cancel" type="primary" onClick={handleBuyConfirmation}>
-                Buy
+              <button key="submit" className="cancel" type="primary" onClick={handleBuyConfirmation}>
+                Submit
+              </button>,
+            ]}
+          >   
+              <form>
+                <label htmlFor="firstname" >First Name:</label>
+                <input type="text" id="firstname" name="firstname"onChange={handleInputChange} className='rounded-textfield'/><br /><br />
+
+                <label htmlFor="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" onChange={handleInputChange} className='rounded-textfield'/><br /><br />
+
+                <label htmlFor="address">Address:</label>
+                <input type="text" id="address" name="address" onChange={handleInputChange} className='rounded-textfield' /><br /><br />
+
+                <label htmlFor="city">City:</label>
+                <input type="text" id="city" name="city"onChange={handleInputChange} className='rounded-textfield' /><br /><br />
+
+                <label htmlFor="state">State:</label>
+                <input type="text" id="state" name="state" onChange={handleInputChange} className='rounded-textfield'/><br /><br />
+
+                <label htmlFor="country">Country:</label>
+                <input type="text" id="country" name="country"onChange={handleInputChange} className='rounded-textfield' /><br /><br />
+
+                <label htmlFor="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" onChange={handleInputChange} className='rounded-textfield'/><br /><br />
+              </form>
+          </Modal>
+          <Modal
+            title="Order detail"
+            visible={buyOrderDetailsVisible}
+            onCancel={() => setOrderDetailsVisible(false)}
+            footer={[
+              <button key="cancel" className="cancel" onClick={() => setOrderDetailsVisible(false)}>
+                Cancel
+              </button>,
+              <button key="buy" className="cancel" type="primary" onClick={hanndelPurchase}>
+                Purchase
               </button>,
             ]}
           >
-            <p className='text-confirm'>Confirm purchase of {quantity} {selectedProduct && selectedProduct.name}?</p>
-            {/* Additional details or confirmation message can be added here */}
+            {selectedProduct && (
+              <table className='table'>
+                <tbody>
+                  <tr>
+                    <td className='cell'>
+                    <img className='image-detail' src={selectedProduct.image} alt="Tree"/>
+                    </td>
+                    <td className='cell'>
+                      <p className='tree-detail'>Species: {selectedProduct.species}</p>
+                      <p className='tree-detail'>Detail: {selectedProduct.detail}</p>
+                      <p className='tree-detail'>Quantity: {quantity}</p>
+                      <p className='tree-detail'>Price: ฿{selectedProduct.price}</p>
+                      <p className='text-total-price'>Total Price: ฿{quantity * selectedProduct.price}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='cell'>
+                      <p className='address-detail'>Name: {shippingAddress.firstname} {shippingAddress.lastname}</p>
+                      <p className='address-detail'>Address: {shippingAddress.address}</p>
+                      <p className='address-detail'>City: {shippingAddress.city}</p>
+                      <p className='address-detail'>Country: {shippingAddress.country}</p>
+                      <p className='address-detail'>Zip: {shippingAddress.zip}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            )}
+          </Modal>
+          <Modal
+            title="Purchase"
+            visible={qrCodeVisible}
+            onCancel={() => setQrCodeVisible(false)}
+              footer={[
+              <button key="cancel" className="cancel" onClick={() => setQrCodeVisible(false)}>
+                Cancel
+              </button>,
+              <button key="comfirm" className="cancel" type="primary" onClick={handleQrCodeConfirmation}>
+                Confirm
+              </button>,
+            ]}
+          >
+            <img src="qr-code.jpg" alt="QR Code" style={{ width: '100%', height: 'auto' }} />
+          </Modal>
+          <Modal
+            title="Sucess"
+            visible={successVisible}
+            onCancel={() => setSuccessVisible(false)}
+            footer={[
+              <button key="comfirm" className="cancel" type="primary" onClick={handleSuccessConfirmation}>
+                Confirm
+              </button>
+            ]}
+            >
+            <img src="Success.png" alt="QR Code" style={{ width: '100%', height: 'auto' }} />
           </Modal>
         </Content>
       </Layout>

@@ -62,3 +62,55 @@
     margin-left: -5%;
     align-items: center;
 }
+.rounded-textfield {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;  
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none; 
+    line-height: 0.2;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+  }
+
+.cell {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    flex: 1;
+    vertical-align: top;
+    background: white;
+}
+
+.image-detail {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.tree-detail {
+    text-align: left;
+    font-size: 15px;
+    line-height: 0.5;
+    font-size: medium;
+}
+
+.text-total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc143c;
+    line-height: 0.5;
+    text-align: left;
+}
+.address-detail {
+    font-size: 15px;
+    line-height: 0.5;
+    text-align: left;
+    font-size: medium;
+}
