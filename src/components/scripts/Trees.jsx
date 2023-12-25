@@ -2,6 +2,7 @@ import { Layout,Modal } from 'antd';
 import Sidebar from './Sidebar';
 import GridItem from './GridItem';
 import React, { useState } from 'react';
+import '../styles/ButtonOrder.css'
 
 const { Content } = Layout;
 const products = [
@@ -81,14 +82,15 @@ const Trees = () => {
           >
             {selectedProduct && (
               <div>
-                <p>Species: {selectedProduct.species}</p>
-                <p>Detail: {selectedProduct.detail}</p>
-                <p>Stock: {selectedProduct.stock}</p>
+                <p className='text-detail'>Species: {selectedProduct.species}</p>
+                <p className='text-detail'>Detail: {selectedProduct.detail}</p>
+                <p className='text-detail'>Stock: {selectedProduct.stock}</p>
                 <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%' }} />
-                <p>Quantity: {quantity}</p>
-                <button onClick={decreaseQuantity}>-</button>
-                <button onClick={increaseQuantity}>+</button>
-                <button type="primary" onClick={handleBuyPlant}>
+                <p className="text-quantity">Quantity: {quantity}</p>
+                <button className="button" onClick={decreaseQuantity}>-</button>
+                <button className="button" onClick={increaseQuantity}>+</button>
+                <br/>
+                <button className="buy" type="primary" onClick={handleBuyPlant}>
                   Buy Plant
                 </button>
               </div>
@@ -101,15 +103,15 @@ const Trees = () => {
             visible={buyModalVisible}
             onCancel={() => setBuyModalVisible(false)}
             footer={[
-              <button key="cancel" onClick={() => setBuyModalVisible(false)}>
+              <button key="cancel" className="cancel" onClick={() => setBuyModalVisible(false)}>
                 Cancel
               </button>,
-              <button key="buy" type="primary" onClick={handleBuyConfirmation}>
+              <button key="buy" className="cancel" type="primary" onClick={handleBuyConfirmation}>
                 Buy
               </button>,
             ]}
           >
-            <p>Confirm purchase of {quantity} {selectedProduct && selectedProduct.name}?</p>
+            <p className='text-confirm'>Confirm purchase of {quantity} {selectedProduct && selectedProduct.name}?</p>
             {/* Additional details or confirmation message can be added here */}
           </Modal>
         </Content>
