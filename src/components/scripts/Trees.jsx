@@ -21,7 +21,7 @@ const products = [
 const Trees = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [buyModalVisible, setBuyModalVisible] = useState(false); // State for buy modal visibility
+  const [buyModalVisible, setBuyModalVisible] = useState(false);
 
   const openModal = (product) => {
     setSelectedProduct(product);
@@ -35,7 +35,9 @@ const Trees = () => {
   };
 
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
+    if (quantity < selectedProduct.stock){
+      setQuantity(quantity + 1);
+    }
   };
 
   const decreaseQuantity = () => {
