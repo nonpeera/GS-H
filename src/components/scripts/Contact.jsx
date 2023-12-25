@@ -30,8 +30,8 @@ const cellStyle = {
     background: 'black',
 };
 const iconImageStyle = {
-    width: '150px',
-    height: '150px',
+    width: '100px',
+    height: '100px',
     margin: 'auto',
 };
 const title = {

@@ -13,20 +13,30 @@
     position: relative;
     border-radius: 0px 0px 100px 100px;
 }
+
 .text {
     font-size: medium;
+    height: 400px;
     text-align: left;
     margin-top: 155px;
-    margin-left: 50px;
+    margin-bottom: 100px;
     margin-right: 100px;
+    margin-left: 50px;
+}
+
+body {
+    background-color: black;
 }
 .background{
     background-color: black;
+    height: 700px;
 }
+
 h1 {
     line-height: 3;
     text-align: left;
 }
+
 h4 {
     font-size: 20px;
     line-height: 0.5;
