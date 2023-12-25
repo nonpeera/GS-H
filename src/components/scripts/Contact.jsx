@@ -20,7 +20,6 @@ const tableStyle = {
     borderCollapse: 'collapse',
     marginTop: '0px', // ระยะห่างระหว่างตารางกับส่วนอื่น
 };
-
 const cellStyle = {
     // border: '2px solid black',
     padding: '10px',
@@ -35,10 +34,13 @@ const iconImageStyle = {
     height: '100px',
     margin: 'auto',
 };
+const title = {
+    fontSize:'30px',
+};
 
 const Contact = () => {
     return (
-        <div>
+        <div style={blackBackgroundStyle}>
             <div style={contactStyle}>
                 Contact us
             </div>
@@ -61,17 +63,17 @@ const Contact = () => {
                         </tr>
                         <tr>
                             <td style={cellStyle}>
-                                <h1>Address</h1>
+                                <h2 style={title}>Address</h2>
                                 <h5>48 Pongyangok Subdistrict,</h5>
                                 <h5>Hang Chat District,</h5>
                                 <h5>Lampang Province 52190</h5>
                             </td>
                             <td style={cellStyle}>
-                                <h1>Phone</h1>
+                                <h2 style={title}>Phone</h2>
                                 <h5>(+66) 98 765 4321</h5>
                             </td>
                             <td style={cellStyle}>
-                                <h1>Email</h1>
+                                <h2 style={title}>Email</h2>
                                 <h5>growmseed@gmail.com</h5>
                             </td>
                         </tr>
