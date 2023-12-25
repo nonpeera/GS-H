@@ -18,14 +18,39 @@ const products = [
 ];
 
 const Trees = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null); // State to store the selected product
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [buyModalVisible, setBuyModalVisible] = useState(false); // State for buy modal visibility
 
   const openModal = (product) => {
-    setSelectedProduct(product); // Set the selected product when clicked
+    setSelectedProduct(product);
+    setQuantity(1);
   };
 
   const closeModal = () => {
-    setSelectedProduct(null); // Clear the selected product when closing the modal
+    setSelectedProduct(null);
+    setQuantity(1);
+    setBuyModalVisible(false); // Close the buy modal when closing the main modal
+  };
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const handleBuyPlant = () => {
+    setBuyModalVisible(true); // Show the buy modal when "Buy Plant" is clicked
+  };
+
+  const handleBuyConfirmation = () => {
+    // Perform actions when buy is confirmed (e.g., add to cart, make a purchase)
+    // For demonstration, simply close the buy modal
+    setBuyModalVisible(false);
   };
 
   return (
@@ -36,7 +61,6 @@ const Trees = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             {products.map((product) => (
               <div key={product.id} onClick={() => openModal(product)}>
-                {/* Render your GridItem component */}
                 <GridItem
                   name={product.name}
                   species={product.species}
@@ -48,7 +72,6 @@ const Trees = () => {
             ))}
           </div>
 
-          {/* Modal for displaying product details */}
           <Modal
             title={selectedProduct ? selectedProduct.name : ''}
             visible={selectedProduct !== null}
@@ -61,8 +84,32 @@ const Trees = () => {
                 <p>Detail: {selectedProduct.detail}</p>
                 <p>Stock: {selectedProduct.stock}</p>
                 <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%' }} />
+                <p>Quantity: {quantity}</p>
+                <button onClick={decreaseQuantity}>-</button>
+                <button onClick={increaseQuantity}>+</button>
+                <button type="primary" onClick={handleBuyPlant}>
+                  Buy Plant
+                </button>
               </div>
             )}
+          </Modal>
+
+          {/* Buy Plant Modal */}
+          <Modal
+            title="Confirm Purchase"
+            visible={buyModalVisible}
+            onCancel={() => setBuyModalVisible(false)}
+            footer={[
+              <button key="cancel" onClick={() => setBuyModalVisible(false)}>
+                Cancel
+              </button>,
+              <button key="buy" type="primary" onClick={handleBuyConfirmation}>
+                Buy
+              </button>,
+            ]}
+          >
+            <p>Confirm purchase of {quantity} {selectedProduct && selectedProduct.name}?</p>
+            {/* Additional details or confirmation message can be added here */}
           </Modal>
         </Content>
       </Layout>
